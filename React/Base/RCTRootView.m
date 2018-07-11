@@ -372,6 +372,8 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
   [_contentView invalidate];
+  [_bridge invalidate];
+  _bridge = nil;
 }
 
 - (void)cancelTouches
