@@ -379,6 +379,15 @@ class VirtualizedSectionList<SectionT: SectionBase> extends React.PureComponent<
      * error delete this comment and run Flow. */
     this._listRef = ref;
   };
+  //添加scrollToOffset方法
+  scrollToOffset(params: {
+    animated ? : ? boolean,
+    offset: number
+  }) {
+    if (this._listRef) {
+      this._listRef.scrollToOffset(params);
+    }
+  }
 }
 
 type ItemWithSeparatorProps = {

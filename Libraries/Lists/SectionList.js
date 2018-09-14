@@ -338,6 +338,15 @@ class SectionList<SectionT: SectionBase<any>> extends React.PureComponent<
      * error delete this comment and run Flow. */
     this._wrapperListRef = ref;
   };
+  //增加 sectionlist scrollToOffset方法</any>
+  scrollToOffset(params: {
+    animated ? : ? boolean,
+    offset: number
+  }) {
+    if (this._wrapperListRef) {
+      this._wrapperListRef.scrollToOffset(params);
+    }
+  }
 }
 
 module.exports = SectionList;
